@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta charset="UTF-8">
+        <title>Paper Plane</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="service de transfert de fichiers volumineux">
+
+        <!--mise à l'échelle réelle-->
+        <meta name="viewport" content="initial-scale=1.0">
+
+        <!--favicon-->
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicon/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon/apple-touch-icon-144x144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href="favicon/apple-touch-icon-60x60.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicon/apple-touch-icon-120x120.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href="favicon/apple-touch-icon-76x76.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicon/apple-touch-icon-152x152.png" />
+        <link rel="icon" type="image/png" href="favicon/favicon-196x196.png" sizes="196x196" />
+        <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="favicon/favicon-128.png" sizes="128x128" />
+        <meta name="application-name" content="&nbsp;"/>
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+        <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+        <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+        <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+        <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+        <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Clicker+Script" rel="stylesheet">
+
+
+
+    </head>
+
+    <body>
+        <h2>Paper Plane</h2>
+        <div class="trajectoire"></div>
+        <div class="rocket">
+            <div class="plane"><img src="images/red-plane.png" alt="image d'avion en papier" /></div>
+            <div class="ecran"><img src="images/ecran.png" alt="image d'un ecran d'ordinateur" /></div>
+            <div id="rocket-body">
+
+                <!--
+<div class="fin fin-left"></div>
+<div class="fin fin-right"></div>
+-->
+            </div>
+            <div class="exhaust-flame"></div>
+            <div class="fumees">
+                <ul class="exhaust-fumes">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul></div>
+        </div>
+        <div>
+            <ul class="star">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <form method="post" runat="server" id="form" enctype="multipart/form-data" novalidate class="form-position">
+
+            <div class="box__input" id="sendform">
+                <input type="file" name="fichiers[]" id="files1" class="box__files btn-ajouter hidden__files" onChange="getfile();" required multiple/> <!-- INPUT MOCHE-->
+
+                <label for="file" class="input-file btn-ajouter" tabindex="0">glissez et déposez vos fichier ou cliquez pour sélectionner</label>
+            </div> <!-- JOLI INPUT-->
+
+            <div id="images_txt"></div>
+
+
+            <div class="destemail__input" id="destemail">
+                <label for="destinataire" class="label-text" tabindex="0" >les envoyer à:</label>
+                <input type="text" name="destemail[]" class="mail champ" id="mail1" required><br/>
+
+
+            </div>
+            <div class="add" id="add">
+                <button type="button" class="add__button" id="addbutton">+</button>
+            </div>
+
+            <div class="mail__input">
+                <label for="expediteur" class="label-text" tabindex="0">de la part de:</label>
+                <input type="text" name="votreemail" class="mail champ" id="votreemail" required><br/>
+
+
+            </div>
+
+            <p class="label-text">laisser un petit message</p>
+
+            <div class="message__input">
+                <textarea type="text" name="message" id="message" required></textarea>
+            </div>
+
+
+            <div class="button">
+                <button type="submit" class="box__button submit btn-envoi" id="sendbutton" onclick="myMove();">Lancer</button>
+            </div>
+
+
+        </form>
+
+        <footer>
+            <div class="base">
+                <h5>Crédits: OnlineFormapro 2017  <br/>M.Belin, M.Bojama, S.Nicolas &amp; N.Petrakova</h5>
+            </div>
+        </footer>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="javascript/script-test.js" type="text/javascript"></script>
+
+    </body>
+</html>

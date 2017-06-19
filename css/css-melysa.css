@@ -1,0 +1,59 @@
+@media screen and (max-width: 767px){
+
+
+    body {
+        height: 100vh;
+        background: linear-gradient(to bottom, #4cb9e7 0%, #238ead 100%);
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+/*
+
+    h2 {
+        font-size: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .trajectoire {
+        display: none;
+    }
+    
+    .rocket {
+        display: none;
+    }
+
+    .fumees {
+        display: none;
+    }
+    
+    .exhaust-fumes {
+        display: none;
+    }
+    
+    .plane {
+        display: none;
+    }
+    
+    .ecran {
+        display: none;
+    }
+    
+    #rocket-body {
+        display: none;
+    }
+    
+    #form {
+        position: absolute;
+    }
+*/
+
+
+
+
+
+
+
+}
